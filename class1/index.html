@@ -16,7 +16,7 @@
     <form class="row g-3 registration-form">
       <div class="col-md-4">
         <label for="first-name" class="form-label">First name</label>
-        <input type="text" class="form-control" id="first-name" required autocomplete="off">
+        <input type="text" class="form-control" id="first-name" required autocomplete="off" onkeypress="validate(false)">
         <div class="valid-feedback" id="first-name-valid">
           Looks good!
         </div>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-md-4">
         <label for="last-name" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="last-name" required autocomplete="off">
+        <input type="text" class="form-control" id="last-name" required autocomplete="off" onkeypress="validate(false)">
         <div class="valid-feedback" id="last-name-valid">
           Looks good!
         </div>
@@ -38,7 +38,7 @@
         <label for="email" class="form-label">Email</label>
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend" required autocomplete="off">
+          <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend" required autocomplete="off" onkeypress="validate(false)">
           <div class="valid-feedback" id="email-valid">
             Looks good!
           </div>
@@ -49,7 +49,7 @@
       </div>
       <div class="col-md-6">
         <label for="city" class="form-label">City</label>
-        <input type="text" class="form-control" id="city" required autocomplete="off">
+        <input type="text" class="form-control" id="city" required autocomplete="off" onkeypress="validate(false)">
         <div class="valid-feedback" id="city-valid">
           Looks good!
         </div>
@@ -107,7 +107,7 @@
       </div>
       <div class="col-md-3">
         <label for="zip-code" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="zip-code" required autocomplete="off">
+        <input type="text" class="form-control" id="zip-code" required autocomplete="off" onkeypress="validate(false)">
         <div class="valid-feedback" id="zip-code-valid">
           Looks good!
         </div>
@@ -117,7 +117,7 @@
       </div>
       <div class="col-12">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="t-and-c" required autocomplete="off">
+          <input class="form-check-input" type="checkbox" value="" id="t-and-c" required>
           <label class="form-check-label" for="t-and-c">
             Agree to terms and conditions
           </label>
@@ -127,7 +127,7 @@
         </div>
       </div>
       <div class="col-12" style="text-align: center;">
-        <button class="btn btn-dark" type="button" onclick="validate()">Submit form</button>
+        <button class="btn btn-dark" type="button" onclick="validate(true)">Submit form</button>
       </div>
     </form>
 

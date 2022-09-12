@@ -176,6 +176,115 @@
 		// let zehraDetails = { firstName, lastName }
 		// console.log(zehraDetails)
 
+		/* 
+			---------------------------------------------------------------------------------------------------
+			9. Destructing (Extracting key as a new variable with the same value)
+		*/
+
+		// let zehraDetails = {
+		// 	firstName: 'Zehra',
+		// 	lastName: 'Khan'
+		// }
+
+		// let firstName = zehraDetails.firstName
+		// let lastName = zehraDetails.lastName
+
+		// let {
+		// 	firstName,
+		// 	lastName
+		// } = zehraDetails
+
+		// console.log(firstName, lastName)
+
+		// console.log(`There is a student - ${firstName} ${lastName} in Module 6. ${firstName} is very good in sports. ${firstName} is continuously practining to upskill herself.`)
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+
+		// let { a, b } = obj1
+
+		// console.log(a, b, c)
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			10. Object.entries(): Returns an array of key-value pairs of objects
+		*/
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10,
+		// 	c: 15,
+		// 	d: 100
+		// }
+
+		// 1. Object.values(): Returns an array of object values
+		// let arr = Object.values(obj1)
+		// console.log(arr)
+
+		// 2. Object.keys(): Returns an array of object keys
+		// let arr = Object.keys(obj1)
+		// console.log(arr)
+
+		// console.log(Object.entries(obj1))
+
+		/* 
+			---------------------------------------------------------------------------------------------------
+			11. Object.assign(): Cloning (Shallow)
+		*/
+
+		// let x = 5
+		// let y = x
+		// x = 10
+		// console.log(y)
+
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// let obj2 = obj1
+		// obj1.a = 100
+		// console.log(obj2)
+
+		// # Shallow Copy
+		// 1. Spread Operator
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+
+		// let obj2 = {
+		// 	...obj1
+		// }
+
+		// obj1.a = 100
+		// console.log(obj2)
+
+		// 2. Object.assign()
+		// let obj2 = Object.assign({}, obj1)
+		// obj1.a = 100
+		// console.log(obj2)
+
+		// # Deep Copy
+		let priyoDetails = {
+			firstName: 'Priyo',
+			lastName: 'Saha',
+			address: {
+				landMark: 'XYZ Block',
+				postOffice: 'ABC',
+				zipCode: 123456,
+			}
+		}
+
+		// let priyoDetailsCopy = { ...priyoDetails } - Shallow copy won't work for nested objects
+		let priyoDetailsCopy = JSON.parse(JSON.stringify(priyoDetails))
+		priyoDetails.address.postOffice = 'DEF'
+		console.log(priyoDetailsCopy)
+	</script>
+</head>
+<body>
+
 	</script>
 </head>
 <body>

@@ -1,5 +1,7 @@
-let savedEmail = ''
-let savedPassword = ''
+//let savedEmail = ''
+//let savedPassword = ''
+
+let USERS_DB = []
 
 function goToHomePage () {
 	document.getElementById('home').style.display = 'block'
@@ -50,9 +52,18 @@ function signup() {
 	}
 
 	if(!error) {
-		savedEmail = email
-		savedPassword = password
+		let userDetails = {
+			firstName,
+			lastName,
+			email,
+			phoneNumber,
+			password,
+		}
+
+		USERS_DB.push(userDetails)
 		alert('Your details have been saved successfully!')
+		document.getElementById('signup-form-id').reset()
+		console.log(USERS_DB)
 	}
 }
 
@@ -60,9 +71,22 @@ function login () {
 	let loginEmail = document.getElementById('login-email').value
 	let loginPassword = document.getElementById('login-password').value
 
-	if(loginEmail === savedEmail && loginPassword === savedPassword) {
+	if(USERS_DB.find(user => user.email === loginEmail && user.password === loginPassword)) {
 		alert('Access granted')
 	} else {
 		alert('Access denied')
 	}
+	document.getElementById('login-form-reset').reset()
 }
+
+
+// 1. Whether any user exists in USERS_DB with the entered email (loginEmail)
+// 2. If user exists, then whether the password for that user matches with the entered password
+
+
+/* 
+	Project Task for Hiatus (14 Sept - 16th Sept): Submission on 17th Sept
+	- Create any popular website (with different sections) using existing HTML, CSS, Bootstrap and JS logic (Shopping site, Online delivery, Library management, etc.)
+	- [Mandatory] Attach authentication logic (Sign up +  Login) to that website
+	- [Mandatory] Any forms used should be validated
+*/

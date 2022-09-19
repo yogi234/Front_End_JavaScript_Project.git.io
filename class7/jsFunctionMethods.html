@@ -50,8 +50,22 @@
 		- If there are x parameters in function definition, there should be 2 arguments
 		*/
 
-		displayIntroduction.apply(ranjha, ['India', 'Asia'])
-		displayIntroduction.apply(amir, ['Sri Lanka', 'Asia'])
+		//displayIntroduction.apply(ranjha, ['India', 'Asia'])
+		//displayIntroduction.apply(amir, ['Sri Lanka', 'Asia'])
+
+		/* ------------------------------------------------------------
+		.bind()
+		- Doesn't get invoked immediately
+		- Attach the object to the function and returns an updated function with that object scope 
+		- Single argument: 'object to attach'
+		*/
+
+		// function displayIntroduction(country, continent) {
+		// 	console.log('My name is ' + this.firstName + ' ' + this.lastName + ". I'm from " + this.city + ', ' + this.state + ', ' + country + '.')
+		// }
+
+		// let displayIntroductionWithBindedObject = displayIntroduction.bind(amir)
+		// displayIntroductionWithBindedObject()
 	</script>
 </head>
 <body>

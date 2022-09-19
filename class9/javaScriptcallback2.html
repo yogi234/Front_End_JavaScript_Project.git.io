@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+			Order placed 
+			After 2s -> Chef received the order and started preparing
+			After 10s -> Pizza Sauce added
+			After 5s -> First layer of cheeze added
+			After 12s -> Toppings added
+			After 5s -> Second layer of cheeze added
+			After 15s -> Pizza baked!
+			After 8s -> Oregano added and packed
+			After 2s -> Package received at counter
+			The order is ready and handed over to the Zomato guy!
+		*/
+
+        const chefReceivedOrder = () => {
+			setTimeout(() => {
+				console.log('Chef received the order and started preparing')
+			}, 2000)
+		}
+
+		const pizzaSauceAdded = () => {
+			setTimeout(() => {
+				console.log('Pizza Sauce added')
+			}, 10000)
+		}
+
+		const firstLayerOfCheezeAdded = () => {
+			setTimeout(() => {
+				console.log('First layer of cheeze added')
+			}, 5000)
+		}
+
+		const toppingsAdded = () => {
+			setTimeout(() => {
+				console.log('Toppings added')
+			}, 5000)
+		}
+
+		const secondLayerOfCheezeAdded = () => {
+			setTimeout(() => {
+				console.log('Second layer of cheeze added')
+			}, 5000)
+		}
+
+		const pizzaBaked = () => {
+			setTimeout(() => {
+				console.log('Pizza baked!')
+			}, 15000)
+		}
+
+		const oreganoAddedAndPacked = () => {
+			setTimeout(() => {
+				console.log('Oregano added and packed')
+			}, 8000)
+		}
+
+		const packageReceivedAtCounter = () => {
+			setTimeout(() => {
+				console.log('Package received at counter')
+			}, 2000)
+		}
+
+		chefReceivedOrder()
+		pizzaSauceAdded()
+		firstLayerOfCheezeAdded()
+		toppingsAdded()
+		secondLayerOfCheezeAdded()
+		pizzaBaked()
+		oreganoAddedAndPacked()
+		packageReceivedAtCounter()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Callbacks</title>
     <script>
         /*
 			Order placed 
@@ -19,9 +19,40 @@
 			The order is ready and handed over to the Zomato guy!
 		*/
 
-        const chefReceivedOrder = () => {
-			setTimeout(() => {
+		const manageOrder = (callback) => {
+			console.log('Order Placed')
+			setTimeout( () => {
 				console.log('Chef received the order and started preparing')
+				setTimeout(() => {
+					console.log('Pizza Sauce added')
+					setTimeout(() => {
+						console.log('First layer of cheeze added')
+						setTimeout(() => {
+							console.log('Toppings added')
+							setTimeout(() => {
+								console.log('Second layer of cheeze added')
+								setTimeout(() => {
+									console.log('Pizza baked!')
+									setTimeout(() => {
+										console.log('Oregano added and packed')
+										setTimeout(() => {
+											console.log('Package received at counter')
+											callback()
+										}, 2000)
+									}, 8000)
+								}, 15000)
+							}, 5000)
+						}, 5000)
+					}, 5000)
+				}, 10000)
+			},2000)
+		}
+
+		/*
+		const chefReceivedOrder = () => {
+			setTimeout(() => {
+			console.log('Chef received the order and started preparing')
+			callback();
 			}, 2000)
 		}
 
@@ -65,19 +96,23 @@
 			setTimeout(() => {
 				console.log('Package received at counter')
 			}, 2000)
-		}
+		}*/
 
-		chefReceivedOrder()
-		pizzaSauceAdded()
-		firstLayerOfCheezeAdded()
-		toppingsAdded()
-		secondLayerOfCheezeAdded()
-		pizzaBaked()
-		oreganoAddedAndPacked()
-		packageReceivedAtCounter()
+		//chefReceivedOrder()
+		//pizzaSauceAdded()
+		//firstLayerOfCheezeAdded()
+		//toppingsAdded()
+		//secondLayerOfCheezeAdded()
+		//pizzaBaked()
+		//oreganoAddedAndPacked()
+		//packageReceivedAtCounter()
+
+
     </script>
 </head>
 <body>
-    
+    <button onclick="manageOrder( () => {
+		console.log('The order is ready and handed over to the Zomato Guy!')
+	})"> Execute Order</button>
 </body>
 </html>
